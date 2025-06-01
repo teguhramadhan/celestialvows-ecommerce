@@ -5,14 +5,21 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/redirect', function () {
-    // Middleware akan handle redirect role user/admin
-})->middleware(['auth', 'role.redirect']);
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->middleware('auth')->name('admin.dashboard');
 
-Route::middleware('auth')->group(function () {
+// 🔁 Redirect otomatis berdasarkan role
+Route::get('/redirect', function () {
+    //
+})->middleware(['auth', 'role.redirect'])->name('redirect');
+
+// 🔒 Route untuk Admin
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+});
+
+// 🔒 Route untuk User
+Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
