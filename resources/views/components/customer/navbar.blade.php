@@ -1,5 +1,5 @@
     <!-- Navbar -->
-    <header class="bg-[#1c1c1f] shadow-md py-8 fixed top-0 w-full z-50">
+    <header class="bg-[#1c1c1f] shadow-md py-8 w-full z-50">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-[#d4af37]">Celestial Vows</h1>
 
@@ -9,7 +9,7 @@
                     class="text-white hover:text-[#d4af37] transition duration-200 ease-in-out font-medium">
                     Home
                 </a>
-                <a href="{{ route('shop') }}"
+                <a href="{{ route('shop.index') }}"
                     class="text-white hover:text-[#d4af37] transition duration-200 ease-in-out font-medium">
                     Shop
                 </a>
@@ -59,7 +59,8 @@
                 <a href="{{ route('home') }}" class="text-white hover:text-[#d4af37] transition text-lg font-medium">
                     Home
                 </a>
-                <a href="{{ route('shop') }}" class="text-white hover:text-[#d4af37] transition text-lg font-medium">
+                <a href="{{ route('shop.index') }}"
+                    class="text-white hover:text-[#d4af37] transition text-lg font-medium">
                     Shop
                 </a>
 

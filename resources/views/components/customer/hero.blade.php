@@ -1,6 +1,6 @@
     <!-- Hero Section -->
     <section id="hero"
-        class="relative h-screen flex flex-col justify-center items-center text-center py-24 px-6 bg-gradient-to-b from-[#0e0e10] to-[#1c1c1f] bg-[url('{{ asset('https://images.unsplash.com/photo-1589902860314-e910697dea18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') }}')] bg-cover bg-center bg-no-repeat">
+        class="relative h-screen flex flex-col justify-center items-center text-center py-24 px-6 bg-[url('{{ asset('https://images.unsplash.com/photo-1589902860314-e910697dea18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') }}')] bg-cover bg-center bg-no-repeat">
         <!-- Overlay -->
         <div class="h-screen absolute inset-0 bg-black bg-opacity-60"></div>
 
