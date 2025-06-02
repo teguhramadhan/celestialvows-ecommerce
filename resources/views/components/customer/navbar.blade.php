@@ -5,7 +5,8 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#" class="text-white hover:text-[#d4af37] transition duration-200 ease-in-out font-medium">
+                <a href="{{ route('home') }}"
+                    class="text-white hover:text-[#d4af37] transition duration-200 ease-in-out font-medium">
                     Home
                 </a>
                 <a href="{{ route('shop') }}"
@@ -55,7 +56,7 @@
                 </button>
 
                 <!-- Menu Items -->
-                <a href="#" class="text-white hover:text-[#d4af37] transition text-lg font-medium">
+                <a href="{{ route('home') }}" class="text-white hover:text-[#d4af37] transition text-lg font-medium">
                     Home
                 </a>
                 <a href="{{ route('shop') }}" class="text-white hover:text-[#d4af37] transition text-lg font-medium">
