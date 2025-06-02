@@ -19,14 +19,11 @@
 <body>
     <x-customer.navbar />
     <div class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-100">
-        <h1 class="text-6xl font-bold text-red-500 mb-4">403
-        </h1>
-        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Akses Ditolak</h2>
-        <p class="text-lg text-gray-600 mb-6">
-            Maaf, Anda tidak memiliki izin untuk mengakses halaman ini.
-        </p>
+        <h1 class="text-6xl font-bold text-[#d4af37] mb-4">404</h1>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Halaman Tidak Ditemukan</h2>
+        <p class="text-gray-600 mb-6">Sepertinya halaman yang kamu cari tidak tersedia atau sudah dipindahkan.</p>
         <a href="{{ route('home') }}"
-            class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+            class="inline-block bg-[#d4af37] text-white px-6 py-3 rounded-md hover:bg-yellow-600 transition">
             Kembali ke Beranda
         </a>
     </div>

@@ -3,12 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 
-// 🔁 Redirect otomatis berdasarkan role
+
+// Redirect otomatis berdasarkan role
 Route::get('/redirect', function () {
     //
 })->middleware(['auth', 'role.redirect'])->name('redirect');
