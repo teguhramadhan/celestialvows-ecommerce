@@ -12,4 +12,15 @@ class Product extends Model
         'price',
         'stock',
     ];
+
+    public function variants()
+    {
+      return $this->hasMany(ProductVariant::class);
+    }
+
+    public function images()
+    {
+      return $this->hasMany(ProductImage::class);
+    }
+
 }
